@@ -18,6 +18,11 @@ define(function (require) {
         var ramona = new Ramona();
         this.scene.start();
         this.scene.add(ramona);
+        ramona.walkAnimator.repeat();
+        setTimeout(function () {
+            console.log('stahp');
+            ramona.walkAnimator.stop();
+        }, 1000);
         return this;
     };
 

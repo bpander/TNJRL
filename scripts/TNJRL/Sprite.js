@@ -55,16 +55,19 @@ define(function (require) {
     };
 
 
-    Sprite.prototype.update = function () {
-        this.frameIndex = (this.frameIndex + 1) % this.frames.length;
-    };
-
-
     Sprite.prototype.draw = function (scene) {
+        var frame = this.frames[this.frameIndex];
+        var sx = 0;
+        var sy = 0;
+        if (frame instanceof Frame) {
+            sx = frame.x;
+            sy = frame.y;
+        }
+
         scene.context.drawImage(
             this.image,
-            this.frames[this.frameIndex].x,
-            this.frames[this.frameIndex].y,
+            sx,
+            sy,
             this.width,
             this.height,
             this.x,

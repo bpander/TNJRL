@@ -2,6 +2,7 @@ define(function (require) {
     'use strict';
 
     var Sprite = require('TNJRL/Sprite');
+    var Animator = require('TNJRL/Animator');
 
 
     function Ramona () {
@@ -12,6 +13,8 @@ define(function (require) {
         this.width = 72;
 
         this.height = 97;
+
+        this.walkAnimator = new Animator(this, 'frameIndex', 0, 9, 20, Animator.EASING.STEP);
 
         this.init();
     }

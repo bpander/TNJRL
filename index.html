@@ -12,7 +12,17 @@
     <script src="scripts/vendor/requirejs/require.js"></script>
     <script>
         require.config({
-            baseUrl: 'scripts'
+            baseUrl: 'scripts',
+
+            paths: {
+                'Q': 'vendor/q/q'
+            },
+
+            shim: {
+                'Q': {
+                    exports: 'Q'
+                }
+            }
         });
 
         require(['main']);
