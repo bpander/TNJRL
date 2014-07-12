@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>TNJRL</title>
+
+    <link rel="stylesheet" href="screen.css" />
+</head>
+<body>
+
+    <canvas id="js-tnjrl" class="utility-isFullViewport" />
+
+    <script src="scripts/vendor/requirejs/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: 'scripts'
+        });
+
+        require(['main']);
+    </script>
+</body>
+</html>

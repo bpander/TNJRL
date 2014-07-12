@@ -1,0 +1,24 @@
+{
+  "name": "TNJRL",
+  "version": "0.0.0",
+  "description": "Canvas Game Engine",
+  "main": "scripts/main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "Brad Anderson"
+  ],
+  "license": "WTFPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14"
+  }
+}
